@@ -82,6 +82,11 @@ $values = array("No no no, you're done",
 <html>
   <head>
     <title>AXP Bingo</title>
+    <meta property="og:title" content="AXP Bingo Card" />
+    <meta property="og:site_name" content="thegigler.com" />
+    <meta property="og:url" content="http://www.thegigler.com/bingo/" />
+    <meta property="og:image" content="http://www.thegigler.com/bingo/axp-bingo-thumb.jpg" />
+
     <script>
       window.onload = function() {
         var cells = document.getElementsByTagName('td');
