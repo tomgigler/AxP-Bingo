@@ -102,16 +102,12 @@ $values = array("No no no, you're done",
 	text-align: center;
         font-size: 20px;
         font-family: Calibri;
+        font-weight: bold;
 	width: 100px;
         border: 1px solid black;
       }
       td.selected {
-	text-align: center;
-        font-size: 20px;
-        font-family: Calibri;
-	width: 100px;
-        border: 1px solid black;
-        background-color: #aaaaaa;
+        background-color: #bbbbbb;
       }
       body, html {
         height: 100%;
@@ -119,8 +115,7 @@ $values = array("No no no, you're done",
 
       /* The hero image */
       .hero-image {
-        /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-        background-image: url("axp-logo.jpg");
+        background-image: url("axp-bingo-banner.jpg");
 
         /* Set a specific height */
         height: 200px;
@@ -151,7 +146,7 @@ $values = array("No no no, you're done",
     print "<tr>";
     for($y = 0 ; $y < 5 ; $y++){
       if($x == 2 && $y == 2){
-        print "<td class='selected'>Crew Cat (Free space)</td>";
+        print "<td class='selected'>Crew Cat<br>(Free space)</td>";
       } else {
         $z = rand(0,count($values)-1);
         print "<td onclick=toggle(event.srcElement)>$values[$z]</td>";
