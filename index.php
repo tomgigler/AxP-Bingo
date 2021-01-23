@@ -81,6 +81,7 @@ $values = array("No no no, you're done",
 ?>
 <html>
   <head>
+    <title>AXP Bingo</title>
     <script>
       function toggle(e){
         if(e.className=='selected'){
@@ -111,6 +112,10 @@ $values = array("No no no, you're done",
       }
       body, html {
         height: 100%;
+      }
+      .footer {
+        font-family: Calibri;
+        font-size: 20px;
       }
 
       /* The hero image */
@@ -158,6 +163,7 @@ $values = array("No no no, you're done",
   }
 ?>
     </table>
+    <div class="footer"><center><br>Click on a square to mark it!  Refresh the page for a new card<br><br>This site is not affiliated with the <a href="https://atheist-community.org">ACA</a> or <a href="https://www.axp.show">The Atheist Experience</a><br><br></center></div>
   </body>
 </html>
 
