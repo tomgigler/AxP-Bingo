@@ -83,62 +83,22 @@ $values = array("No no no, you're done",
   <head>
     <title>AXP Bingo</title>
     <script>
-      function toggle(e){
-        if(e.className=='selected'){
-          e.className=''
-	} else {
-          e.className='selected'
-	}
+      window.onload = function() {
+        var cells = document.getElementsByTagName('td');
+        for(var i = 0; i < cells.length; i++) {
+          var cell = cells[i];
+          cell.onclick = function(event) {
+            e = event.srcElement
+            if(e.className=='selected'){
+              e.className=''
+            } else if(e.className==''){
+              e.className='selected'
+            }
+          }
+        }
       }
     </script>
-    <style>
-      table {
-        border: 1px solid black;
-        width: 800px;
-      }
-      tr {
-        height: 140px;
-      }
-      td {
-	text-align: center;
-        font-size: 20px;
-        font-family: Calibri;
-        font-weight: bold;
-	width: 100px;
-        border: 1px solid black;
-      }
-      td.selected {
-        background-color: #bbbbbb;
-      }
-      body, html {
-        height: 100%;
-      }
-      .footer {
-        font-family: Calibri;
-        font-size: 20px;
-      }
-
-      /* The hero image */
-      .hero-image {
-        background-image: url("axp-bingo-banner.jpg");
-
-        /* Set a specific height */
-        height: 200px;
-
-        /* Position and center the image to scale nicely on all screens */
-        background-position: center;
-        background-repeat: no-repeat;
-        position: relative;
-      }
-
-      /* Place text in the middle of the image */
-      .hero-text {
-        text-align: center;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <div class="hero-image">
@@ -146,24 +106,33 @@ $values = array("No no no, you're done",
       </div>
     </div>
     <table align='center'>
-<?php
-  for($x = 0 ; $x < 5 ; $x++){
-    print "<tr>";
-    for($y = 0 ; $y < 5 ; $y++){
-      if($x == 2 && $y == 2){
-        print "<td class='selected'>Crew Cat<br>(Free space)</td>";
-      } else {
-        $z = rand(0,count($values)-1);
-	$value = $values[$z];
-	\array_splice($values, $z, 1);
-        print "<td onclick=toggle(event.srcElement)>$value</td>";
+    <?php
+      for($x = 0 ; $x < 5 ; $x++){
+        print "      <tr>\n";
+        for($y = 0 ; $y < 5 ; $y++){
+          if($x == 2 && $y == 2){
+            print "        <td class='center-spot'>Crew Cat<br>(Free space)</td>\n";
+          } else {
+            $z = rand(0,count($values)-1);
+            $value = $values[$z];
+            \array_splice($values, $z, 1);
+            print "        <td>$value</td>\n";
+          }
+        }
+        print "      </tr>\n";
       }
-    }
-    print "</tr>";
-  }
-?>
+    ?>
     </table>
-    <div class="footer"><center><br>Click on a square to mark it!  Refresh the page for a new card<br><br>This site is not affiliated with the <a href="https://atheist-community.org">ACA</a> or <a href="https://www.axp.show">The Atheist Experience</a><br><br></center></div>
+    <div class="footer">
+      <center>
+        <br>
+        Click on a square to mark it!  Refresh the page for a new card
+        <br>
+        <br>
+        This site is not affiliated with the <a href="https://atheist-community.org">ACA</a> or <a href="https://www.axp.show">The Atheist Experience</a>
+        <br><br>
+      </center>
+    </div>
   </body>
 </html>
 
