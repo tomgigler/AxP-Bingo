@@ -113,10 +113,38 @@ $values = array("No no no, you're done",
         border: 1px solid black;
         background-color: #aaaaaa;
       }
+      body, html {
+        height: 100%;
+      }
+
+      /* The hero image */
+      .hero-image {
+        /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+        background-image: url("axp-logo.jpg");
+
+        /* Set a specific height */
+        height: 200px;
+
+        /* Position and center the image to scale nicely on all screens */
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+      }
+
+      /* Place text in the middle of the image */
+      .hero-text {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+      }
     </style>
   </head>
   <body>
-    <h1 align='center'>AxP Bingo Card</h1>
+    <div class="hero-image">
+      <div class="hero-text">
+      </div>
+    </div>
     <table align='center'>
 <?php
   for($x = 0 ; $x < 5 ; $x++){
