@@ -86,6 +86,8 @@ $values = array("No no no, you're done",
     <meta property="og:site_name" content="thegigler.com" />
     <meta property="og:url" content="http://www.thegigler.com/bingo/" />
     <meta property="og:image" content="http://www.thegigler.com/bingo/axp-bingo-thumb.jpg" />
+    <meta property="og:image:width" content="438" />
+    <meta property="og:image:height" content="404" />
 
     <script>
       window.onload = function() {
