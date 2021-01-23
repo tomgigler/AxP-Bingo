@@ -149,7 +149,9 @@ $values = array("No no no, you're done",
         print "<td class='selected'>Crew Cat<br>(Free space)</td>";
       } else {
         $z = rand(0,count($values)-1);
-        print "<td onclick=toggle(event.srcElement)>$values[$z]</td>";
+	$value = $values[$z];
+	\array_splice($values, $z, 1);
+        print "<td onclick=toggle(event.srcElement)>$value</td>";
       }
     }
     print "</tr>";
