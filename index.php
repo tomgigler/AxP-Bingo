@@ -56,7 +56,11 @@ $connection->close();
     <div class="footer">
       <center>
         <br>
-        Click on a square to mark it!  Refresh the page for a new card
+        Click on a square to mark it!
+        <br>
+        <br>
+        <button class="button" onclick=clear_all()>Clear All</button>
+        <button class="button" onclick=make_card()>New Card</button>
         <br>
         <br>
         This site is not affiliated with the <a href="https://atheist-community.org">ACA</a> or <a href="https://www.axp.show">The Atheist Experience</a>

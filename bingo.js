@@ -14,7 +14,15 @@ function shuffle(array) {
   return array;
 }
 
+function clear_all(){
+  var cells = document.getElementsByTagName('td')
+  for(var i = 0; i < cells.length; i++)
+    if(i != 12)
+      cells[i].className=''
+}
+
 function make_card(){
+  clear_all()
   var shuffled_values = shuffle(values)
   var cells = document.getElementsByTagName('td')
   for(var i = 0; i < cells.length; i++) {
