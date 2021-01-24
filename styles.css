@@ -1,5 +1,4 @@
 table {
-  border: 1px solid black;
   width: 700px;
 }
 tr {
@@ -11,15 +10,17 @@ td {
   font-family: Calibri;
   font-weight: bold;
   width: 100px;
-  border: 1px solid black;
   cursor: pointer;
+  background-color: #cccccc;
 }
 td.center-spot {
-  background-color: #bbbbbb;
+  background-color: #008CBA;
+  color: white;
   cursor: default;
 }
 td.selected {
-  background-color: #bbbbbb;
+  background-color: #008CBA;
+  color: white;
   cursor: pointer;
 }
 body, html {
@@ -52,7 +53,7 @@ body, html {
 }
 
 button {
-  background-color: #008CBA;
+  background-color: #005C8A;
   border: none;
   color: white;
   padding: 15px 32px;
