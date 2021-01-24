@@ -17,8 +17,8 @@ $connection->close();
     <title>AXP Bingo</title>
     <meta property="og:title" content="AXP Bingo Card" />
     <meta property="og:site_name" content="thegigler.com" />
-    <meta property="og:url" content="http://www.thegigler.com/bingo/" />
-    <meta property="og:image" content="http://www.thegigler.com/bingo/axp-bingo-thumb.jpg" />
+    <meta property="og:url" content="http://www.thegigler.com/axp-bingo/" />
+    <meta property="og:image" content="http://www.thegigler.com/axp-bingo/axp-bingo-thumb.jpg" />
     <meta property="og:image:width" content="438" />
     <meta property="og:image:height" content="404" />
 
