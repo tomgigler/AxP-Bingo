@@ -8,20 +8,27 @@ td {
   text-align: center;
   font-size: 16px;
   font-family: Calibri;
-  font-weight: bold;
   width: 100px;
   cursor: pointer;
   background-color: #cccccc;
+}
+td:hover {
+  font-weight: bold;
 }
 td.center-spot {
   background-color: #008CBA;
   color: white;
   cursor: default;
+  font-weight: bold;
+}
+td.center-spot:hover {
+  font-weight: bold;
 }
 td.selected {
   background-color: #008CBA;
   color: white;
   cursor: pointer;
+  font-weight: bold;
 }
 body, html {
   height: 100%;
