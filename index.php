@@ -22,21 +22,15 @@ $connection->close();
     <meta property="og:image:height" content="404" />
 
     <script>
-      window.onload = function() {
-        var cells = document.getElementsByTagName('td');
-        for(var i = 0; i < cells.length; i++) {
-          var cell = cells[i];
-          cell.onclick = function(event) {
-            e = event.srcElement
-            if(e.className=='selected'){
-              e.className=''
-            } else if(e.className==''){
-              e.className='selected'
-            }
-          }
-        }
+    <?php
+      print "\nvar values = [\n";
+      for($x = 0 ; $x < count($values) ; $x++){
+        print "\"$values[$x]\",\n";
       }
+      print "];\n\n";
+    ?>
     </script>
+    <script src="bingo.js"></script>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -52,10 +46,7 @@ $connection->close();
           if($x == 2 && $y == 2){
             print "        <td class='center-spot'>Crew Cat<br>(Free space)</td>\n";
           } else {
-            $z = rand(0,count($values)-1);
-            $value = $values[$z];
-            \array_splice($values, $z, 1);
-            print "        <td>$value</td>\n";
+            print "        <td></td>\n";
           }
         }
         print "      </tr>\n";
