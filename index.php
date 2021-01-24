@@ -1,6 +1,7 @@
 <?php
 
-$connection = new mysqli("localhost", "bingo", "foozeball3", "bingo");
+include "settings.inc";
+$connection = new mysqli("localhost", $db_user, $db_pass, $db_name);
 $result = $connection->query("SELECT spot FROM spots");
 
 $values = array();
