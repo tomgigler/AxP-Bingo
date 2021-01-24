@@ -26,7 +26,7 @@ $connection->close();
     <?php
       print "\nvar values = [\n";
       for($x = 0 ; $x < count($values) ; $x++){
-        print "\"$values[$x]\",\n";
+        print "\"" . strtoupper($values[$x]) . "\",\n";
       }
       print "];\n\n";
     ?>
@@ -45,7 +45,7 @@ $connection->close();
         print "      <tr>\n";
         for($y = 0 ; $y < 5 ; $y++){
           if($x == 2 && $y == 2){
-            print "        <td class='center-spot'>Crew Cat<br>(Free space)</td>\n";
+            print "        <td class='center-spot'>CREW CAT<br>(Free space)</td>\n";
           } else {
             print "        <td></td>\n";
           }
