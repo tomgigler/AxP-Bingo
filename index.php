@@ -59,7 +59,7 @@ $connection->close();
         Click on a square to mark it!
         <br>
         <br>
-        <button class="button" onclick=clear_all()>Clear All</button>
+        <button id="clear_all_button" class="button" onclick=clear_all()>Clear All</button>
         <button class="button" onclick=make_card()>New Card</button>
         <br>
         <br>
