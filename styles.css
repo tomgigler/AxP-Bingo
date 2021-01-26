@@ -62,7 +62,7 @@ body, html {
 
 button {
   background-color: #005C8A;
-  border: none;
+  border: 3px solid #005C8A;
   color: white;
   padding: 15px 32px;
   text-align: center;
@@ -70,9 +70,14 @@ button {
   display: inline-block;
   font-size: 16px;
   cursor: pointer;
+  margin-left: 30px;
+}
+button:hover {
+  border: 3px solid #002C4A;
 }
 button:disabled,
 button[disabled]{
   background-color: #DDDDDD;
+  border: 3px solid #DDDDDD;
   cursor: default;
 }
