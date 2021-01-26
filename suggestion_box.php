@@ -1,15 +1,24 @@
 <?php
 
 include "settings.inc";
-$connection = new mysqli("localhost", $db_user, $db_pass, $db_name);
-$result = $connection->query("SELECT spot FROM spots");
 
-$values = array();
-while($row = $result->fetch_row()) {
-  array_push($values, $row[0]);
+if (isset($_POST['NAME']) && isset($_POST['NAME']))
+{
+  if($_POST['NAME'] == ""){
+    $message = "<center><font color='red'><b>--A name is required--</b></font></center><br>\n";
+  } elseif($_POST['SUGGESTION'] == ""){
+    $message = "<center><font color='red'><b>--Suggestion is required--</b></font></center><br>\n";
+  } else {
+    $connection = new mysqli("localhost", $db_user, $db_pass, $db_name);
+    $connection->set_charset("utf8mb4");
+    $stmt = $connection->prepare("INSERT INTO suggestions values (?, ?) ON DUPLICATE KEY UPDATE name = ?");
+    $stmt->bind_param('sss', $_POST['NAME'], $_POST['SUGGESTION'], $_POST['NAME']);
+    $stmt->execute();
+    $stmt->close();
+    $connection->close();
+    $message = "<center><font color='green'><b>--Thank you for your suggestion--</b></font></center><br>\n";
+  }
 }
-
-$connection->close();
 
 ?>
 <html>
@@ -22,16 +31,6 @@ $connection->close();
     <meta property="og:image:width" content="438" />
     <meta property="og:image:height" content="404" />
 
-    <script>
-    <?php
-      print "\nvar values = [\n";
-      for($x = 0 ; $x < count($values) ; $x++){
-        print "\"" . strtoupper($values[$x]) . "\",\n";
-      }
-      print "];\n\n";
-    ?>
-    </script>
-    <script src="bingo.js"></script>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -40,14 +39,28 @@ $connection->close();
       </div>
     </div>
     <div class="footer">
-      <br>
-      <br>
       <center>
-        <div style="text-align: center">
-          <button class="button" onclick="location.href='index.php'">Home</button>
-        </div>
+<?php
+if (isset($message))
+{
+  print "<br>".$message."\n";
+  unset($message);
+} else {
+  print "<br><br><br>\n";
+}
+?>
+        <form id="suggestion-form" name='form' method='POST' enctype='multipart/form-data' autocomplete='off'>
+           <center>
+             <b>Your name:</b><br><input type='text' name='NAME' size="50" maxlength="50"/><br>
+             <br>
+             <b>Your suggestion:</b><br><textarea name="SUGGESTION" cols="100" rows="10" style="resize: none;" maxlength="650"></textarea></br>
+             <br>
+             <button onclick=submit()>Submit</buton>
+           </center>
+        </form>
         <br>
-        <br>
+        Click <a href="index.php">here</a> to return to the main page
+        <br><br>
         This site is not affiliated with the <a href="https://atheist-community.org">ACA</a> or <a href="https://www.axp.show">The Atheist Experience</a>
         <br><br>
       </center>
