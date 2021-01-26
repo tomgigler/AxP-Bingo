@@ -17,8 +17,8 @@ $connection->close();
     <title>AXP Bingo</title>
     <meta property="og:title" content="AXP Bingo Card" />
     <meta property="og:site_name" content="thegigler.com" />
-    <meta property="og:url" content="http://www.thegigler.com/axp-bingo/" />
-    <meta property="og:image" content="http://www.thegigler.com/axp-bingo/axp-bingo-thumb.jpg" />
+    <meta property="og:url" content="http://www.thegigler.com/bingo/" />
+    <meta property="og:image" content="http://www.thegigler.com/bingo/axp-bingo-thumb.jpg" />
     <meta property="og:image:width" content="438" />
     <meta property="og:image:height" content="404" />
 
@@ -39,30 +39,13 @@ $connection->close();
       <div class="hero-text">
       </div>
     </div>
-    <table align='center'>
-    <?php
-      for($x = 0 ; $x < 5 ; $x++){
-        print "      <tr>\n";
-        for($y = 0 ; $y < 5 ; $y++){
-          if($x == 2 && $y == 2){
-            print "        <td class='center-spot'>CREW CAT<br>(Free space)</td>\n";
-          } else {
-            print "        <td></td>\n";
-          }
-        }
-        print "      </tr>\n";
-      }
-    ?>
-    </table>
     <div class="footer">
+      <br>
+      <br>
       <center>
-        <br>
-        Click on a square to mark it!
-        <br>
-        <br>
-        <button id="clear_all_button" class="button" onclick=clear_all()>Clear All</button>
-        <button class="button" onclick=make_card()>New Card</button>
-        <button class="button" onclick="location.href='suggestion_box.php'">Suggestion Box</button>
+        <div style="text-align: center">
+          <button class="button" onclick="location.href='index.php'">Home</button>
+        </div>
         <br>
         <br>
         This site is not affiliated with the <a href="https://atheist-community.org">ACA</a> or <a href="https://www.axp.show">The Atheist Experience</a>
