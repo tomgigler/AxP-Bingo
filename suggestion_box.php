@@ -11,8 +11,10 @@ if (isset($_POST['NAME']) && isset($_POST['NAME']))
   } else {
     $connection = new mysqli("localhost", $db_user, $db_pass, $db_name);
     $connection->set_charset("utf8mb4");
-    $stmt = $connection->prepare("INSERT INTO suggestions values (?, ?) ON DUPLICATE KEY UPDATE name = ?");
-    $stmt->bind_param('sss', $_POST['NAME'], $_POST['SUGGESTION'], $_POST['NAME']);
+    $stmt = $connection->prepare("INSERT INTO suggestions values (?, ?, ?) ON DUPLICATE KEY UPDATE name = ?");
+    print "Hi";
+    $timestamp = time();
+    $stmt->bind_param('ssis', $_POST['NAME'], $_POST['SUGGESTION'], $timestamp, $_POST['NAME']);
     $stmt->execute();
     $stmt->close();
     $connection->close();

@@ -17,7 +17,7 @@
     </div>
     <center>
       <table class="suggestions" border=1>
-        <tr class="suggestions"><th class="suggestions">Name</th><th>Suggestion</th></tr> 
+        <tr class="suggestions"><th class="suggestions">Name</th><th>Suggestion</th><th>Date</th></tr> 
 <?php
 
 include "settings.inc";
@@ -32,6 +32,9 @@ while($row = $result->fetch_row()) {
   print "          </td>\n";
   print "          <td class=\"suggestions\">\n";
   print "            ".$row[1];
+  print "          </td>\n";
+  print "          <td class=\"suggestions\">\n";
+  print "            ".$row[2];
   print "          </td>\n";
   print "        </tr>\n";
 }
