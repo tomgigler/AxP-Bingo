@@ -33,7 +33,7 @@ while($row = $result->fetch_row()) {
   print "          <td class=\"suggestions\">\n";
   print "            ".$row[1];
   print "          </td>\n";
-  print "          <td class=\"suggestions\">\n";
+  print "          <td class=\"suggestions\" name=\"delivery_time\">\n";
   print "            ".$row[2];
   print "          </td>\n";
   print "        </tr>\n";
@@ -53,6 +53,19 @@ $connection->close();
         <br><br>
       </center>
     </div>
+    <script>
+      function convert_times(){
+        var cells = document.getElementsByName('delivery_time')
+        for(var i = 0; i < cells.length; i++){
+          var myDate = new Date(parseInt(cells[i].innerHTML)*1000)
+          cells[i].innerHTML = myDate
+        }
+      }
+
+      window.onload = function() {
+        convert_times()
+      }
+    </script>
   </body>
 </html>
 

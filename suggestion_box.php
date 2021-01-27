@@ -55,7 +55,7 @@ if (isset($message))
            <center>
              <b>Your name:</b><br><input type='text' name='NAME' size="50" maxlength="50"/><br>
              <br>
-             <b>Your suggestion:</b><br><textarea name="SUGGESTION" cols="100" rows="10" style="resize: none;" maxlength="650"></textarea></br>
+             <b>Your suggestion:</b><br><textarea name="SUGGESTION" cols="100" rows="10" style="resize: none;" maxlength="648"></textarea></br>
              <br>
              <button onclick=submit()>Submit</buton>
            </center>
