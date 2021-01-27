@@ -31,6 +31,18 @@ td.selected {
   cursor: pointer;
   font-weight: bold;
 }
+table.suggestions {
+  width: auto;
+}
+tr.suggestions {
+  height: auto;
+}
+td.suggestions {
+  width: auto;
+  background-color: white;
+  font-weight: normal;
+  cursor: default;
+}
 body, html {
   height: 100%;
 }
