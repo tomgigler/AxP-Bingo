@@ -46,8 +46,6 @@ $connection->close();
 
     <div class="footer">
       <center>
-        <br>
-        Click <a href="index.php">here</a> to return to the main page
         <br><br>
         This site is not affiliated with the <a href="https://atheist-community.org">ACA</a> or <a href="https://www.axp.show">The Atheist Experience</a>
         <br><br>

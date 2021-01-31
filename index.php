@@ -62,7 +62,7 @@ $connection->close();
         <br>
         <button id="clear_all_button" class="button" onclick=clear_all()>Clear All</button>
         <button class="button" onclick=make_card()>New Card</button>
-        <button class="button" onclick="location.href='suggestion_box.php'">Suggestion Box</button>
+        <button class="button" onclick="window.open('suggestion_box.php')">Suggestion Box</button>
         <br>
         <br>
         This site is not affiliated with the <a href="https://atheist-community.org">ACA</a> or <a href="https://www.axp.show">The Atheist Experience</a>
