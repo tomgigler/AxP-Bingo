@@ -66,6 +66,8 @@ $connection->close();
         <br>
         <br>
         This site is not affiliated with the <a href="https://atheist-community.org">ACA</a> or <a href="https://www.axp.show">The Atheist Experience</a>
+	<br><br>
+        The Talk Heathen version is <a target="_blank" href="http://meghanlewisdesign.com/portfolio/talk-heathen-bingo">available here</a>!
         <br><br>
       </center>
     </div>
