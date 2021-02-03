@@ -17,11 +17,11 @@ $connection->close();
     <title>AXP Bingo</title>
     <meta property="og:title" content="AXP Bingo Card" />
     <meta property="og:site_name" content="thegigler.com" />
-    <meta property="og:url" content="http://www.thegigler.com/axp-bingo/" />
-    <meta property="og:image" content="http://www.thegigler.com/axp-bingo/axp-bingo-thumb.jpg" />
+    <meta property="og:url" content="https://www.thegigler.com/axp-bingo/" />
+    <meta property="og:image" content="https://www.thegigler.com/axp-bingo/axp-bingo-thumb.jpg" />
     <meta property="og:image:width" content="438" />
     <meta property="og:image:height" content="404" />
-    <link rel="shortcut icon" href="http://www.thegigler.com/axp-bingo/axp-bingo.ico"/>
+    <link rel="shortcut icon" href="axp-bingo.ico"/>
 
     <script>
     <?php
