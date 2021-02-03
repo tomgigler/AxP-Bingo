@@ -21,6 +21,7 @@ $connection->close();
     <meta property="og:image" content="http://www.thegigler.com/axp-bingo/axp-bingo-thumb.jpg" />
     <meta property="og:image:width" content="438" />
     <meta property="og:image:height" content="404" />
+    <link rel="shortcut icon" href="http://www.thegigler.com/axp-bingo/axp-bingo.ico"/>
 
     <script>
     <?php
