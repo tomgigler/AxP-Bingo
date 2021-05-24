@@ -20,7 +20,7 @@
         <tr class="suggestions"><th class="suggestions">Name</th><th>Suggestion</th><th>Date</th></tr> 
 <?php
 
-include "settings.inc";
+include "settings.php";
 
 $connection = new mysqli("localhost", $db_user, $db_pass, $db_name);
 $connection->set_charset("utf8mb4");

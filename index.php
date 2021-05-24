@@ -1,6 +1,6 @@
 <?php
 
-include "settings.inc";
+include "settings.php";
 $connection = new mysqli("localhost", $db_user, $db_pass, $db_name);
 $result = $connection->query("SELECT spot FROM spots");
 

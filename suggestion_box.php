@@ -1,6 +1,6 @@
 <?php
 
-include "settings.inc";
+include "settings.php";
 
 if (isset($_POST['NAME']) && isset($_POST['NAME']))
 {
