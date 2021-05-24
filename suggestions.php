@@ -24,7 +24,7 @@ include "settings.inc";
 
 $connection = new mysqli("localhost", $db_user, $db_pass, $db_name);
 $connection->set_charset("utf8mb4");
-$result = $connection->query("SELECT * FROM suggestions");
+$result = $connection->query("SELECT * FROM suggestions ORDER BY date DESC");
 while($row = $result->fetch_row()) {
   print "        <tr class=\"suggestions\">\n";
   print "          <td class=\"suggestions\">\n";
