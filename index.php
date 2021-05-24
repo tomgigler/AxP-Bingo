@@ -1,6 +1,6 @@
 <?php
 
-include "settings.inc";
+include "settings.php";
 $connection = new mysqli("localhost", $db_user, $db_pass, $db_name);
 $result = $connection->query("SELECT spot FROM spots");
 
@@ -14,14 +14,14 @@ $connection->close();
 ?>
 <html>
   <head>
-    <title>AXP Bingo</title>
-    <meta property="og:title" content="AXP Bingo Card" />
+    <title>SG Bingo</title>
+    <meta property="og:title" content="SG Bingo Card" />
     <meta property="og:site_name" content="thegigler.com" />
-    <meta property="og:url" content="https://www.thegigler.com/axp-bingo/" />
-    <meta property="og:image" content="https://www.thegigler.com/axp-bingo/axp-bingo-thumb.jpg" />
+    <meta property="og:url" content="https://www.thegigler.com/sg-bingo/" />
+    <meta property="og:image" content="https://www.thegigler.com/sg-bingo/sg-thumb.jpg" />
     <meta property="og:image:width" content="438" />
     <meta property="og:image:height" content="404" />
-    <link rel="shortcut icon" href="axp-bingo.ico"/>
+    <link rel="shortcut icon" href="sg-favicon.ico"/>
 
     <script>
     <?php
@@ -40,13 +40,14 @@ $connection->close();
       <div class="hero-text">
       </div>
     </div>
+    <br><br>
     <table align='center'>
     <?php
       for($x = 0 ; $x < 5 ; $x++){
         print "      <tr>\n";
         for($y = 0 ; $y < 5 ; $y++){
           if($x == 2 && $y == 2){
-            print "        <td class='center-spot'>CREW CAT<br>(Free space)</td>\n";
+            print "        <td class='center-spot'>Free space</td>\n";
           } else {
             print "        <td></td>\n";
           }
@@ -66,10 +67,7 @@ $connection->close();
         <button class="button" onclick="window.open('suggestion_box.php')">Suggestion Box</button>
         <br>
         <br>
-        This site is not affiliated with the <a href="https://atheist-community.org">ACA</a> or <a href="https://www.axp.show">The Atheist Experience</a>
-	<br><br>
-        The Talk Heathen version is <a target="_blank" href="http://meghanlewisdesign.com/portfolio/talk-heathen-bingo">available here</a>!
-        <br><br>
+        <br>
       </center>
     </div>
   </body>

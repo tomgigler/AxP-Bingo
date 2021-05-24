@@ -17,7 +17,7 @@ td:hover {
   font-weight: bold;
 }
 td.center-spot {
-  background-color: #008CBA;
+  background-color: #FF8B3D;
   color: white;
   cursor: default;
   font-weight: bold;
@@ -26,7 +26,7 @@ td.center-spot:hover {
   font-weight: bold;
 }
 td.selected {
-  background-color: #008CBA;
+  background-color: #FF8B3D;
   color: white;
   cursor: pointer;
   font-weight: bold;
@@ -53,10 +53,10 @@ body, html {
 
 /* The hero image */
 .hero-image {
-  background-image: url("axp-bingo-banner.jpg");
+  background-image: url("sg-banner.jpg");
 
   /* Set a specific height */
-  height: 200px;
+  height: 350px;
 
   /* Position and center the image to scale nicely on all screens */
   background-position: center;
@@ -73,8 +73,8 @@ body, html {
 }
 
 button {
-  background-color: #005C8A;
-  border: 3px solid #005C8A;
+  background-color: #FF8B3D;
+  border: 3px solid #FF8B3D;
   color: white;
   padding: 15px 32px;
   text-align: center;

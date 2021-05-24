@@ -1,10 +1,10 @@
 <html>
   <head>
-    <title>AXP Bingo</title>
-    <meta property="og:title" content="AXP Bingo Card" />
+    <title>SG Bingo</title>
+    <meta property="og:title" content="SG Bingo Card" />
     <meta property="og:site_name" content="thegigler.com" />
     <meta property="og:url" content="http://www.thegigler.com/bingo/" />
-    <meta property="og:image" content="http://www.thegigler.com/bingo/axp-bingo-thumb.jpg" />
+    <meta property="og:image" content="http://www.thegigler.com/bingo/sg-thumb.jpg" />
     <meta property="og:image:width" content="438" />
     <meta property="og:image:height" content="404" />
 
@@ -15,16 +15,17 @@
       <div class="hero-text">
       </div>
     </div>
+    <br><br>
     <center>
       <table class="suggestions" border=1>
         <tr class="suggestions"><th class="suggestions">Name</th><th>Suggestion</th><th>Date</th></tr> 
 <?php
 
-include "settings.inc";
+include "settings.php";
 
 $connection = new mysqli("localhost", $db_user, $db_pass, $db_name);
 $connection->set_charset("utf8mb4");
-$result = $connection->query("SELECT * FROM suggestions");
+$result = $connection->query("SELECT * FROM suggestions ORDER BY date DESC");
 while($row = $result->fetch_row()) {
   print "        <tr class=\"suggestions\">\n";
   print "          <td class=\"suggestions\">\n";
@@ -46,8 +47,6 @@ $connection->close();
 
     <div class="footer">
       <center>
-        <br><br>
-        This site is not affiliated with the <a href="https://atheist-community.org">ACA</a> or <a href="https://www.axp.show">The Atheist Experience</a>
         <br><br>
       </center>
     </div>
